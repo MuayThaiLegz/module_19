@@ -60,7 +60,7 @@ def send_transaction(account, to, wage):
     # Construct a raw transaction
     raw_tx = {
         "to": to,
-        "from": account.address,
+        #"from": account.address,
         "value": value,
         "gas": gasEstimate,
         "gasPrice": w3.eth.generateGasPrice(),
