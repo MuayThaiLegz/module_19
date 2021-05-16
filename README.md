@@ -113,11 +113,52 @@ def send_transaction(account, to, wage):
 
     # Send the signed transactions
     return w3.eth.sendRawTransaction(signed_tx.rawTransaction)
-```
+
 ------
+# Import the following functions from the `crypto_wallet.py` file:
+# * `generate_account`
+# * `get_balance`
+# * `send_transaction`
+
+from crypto_wallet import generate_account
+from crypto_wallet import get_balance
+from crypto_wallet import send_transaction 
+
+#  Call the `generate_account` function and save it as the variable `account`
+# YOUR CODE HERE
+
+account = generate_account()
+
+##########################################
+
+# Write the client's Ethereum account address to the sidebar
+st.sidebar.write(account.address)
+
+# Call `get_balance` function and pass it your account address
+# Write the returned ether balance to the sidebar
+# YOUR CODE HERE
+
+account_ = get_balance(account.address)
+st.sidebar.write(account)
+
+# Call the `send_transaction` function and pass it 3 parameters:
+    # Your `account`, the `candidate_address`, and the `wage` as parameters
+    # Save the returned transaction hash as a variable named `transaction_hash`
+    # YOUR CODE HERE
+    
+    transaction_hash = send_transaction(account, candidate_address, wage)
+
+    # Markdown for the transaction hash
+    st.sidebar.markdown("#### Validated Transaction Hash")
+
+    # Write the returned transaction hash to the screen
+    st.sidebar.write(transaction_hash)
+
+    # Celebrate your successful payment
+    st.balloons()
 
 
+```
 # demonstration video 
 
-https://user-images.githubusercontent.com/73854785/117518120-73825600-af53-11eb-94d6-70560a997303.mp4
 
