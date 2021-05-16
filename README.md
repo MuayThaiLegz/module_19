@@ -159,6 +159,12 @@ st.sidebar.write(account)
 
 
 ```
-# demonstration video 
+# Validating pics 
+Sent from the postal side
 
+![sent](https://user-images.githubusercontent.com/73854785/118416273-bdf68780-b663-11eb-9b2e-50c816959062.png)
+-----
+Recived on https://kovan.etherscan.io 
+
+![recived](https://user-images.githubusercontent.com/73854785/118416291-cc44a380-b663-11eb-97c1-eece837522f1.PNG)
 
