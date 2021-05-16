@@ -156,8 +156,8 @@ st.sidebar.write(account.address)
 # Write the returned ether balance to the sidebar
 # YOUR CODE HERE
 
-act_balance = get_balance(account.address)
-st.write(act_balance)
+account_ = get_balance(account.address)
+st.sidebar.write(account)
 
 ##########################################
 
@@ -250,9 +250,16 @@ st.sidebar.markdown("## Total Wage in Ether")
 # value of the `hours` variable
 # YOUR CODE HERE
 
+wage = hours *  hourly_rate
+
+ 
 # @TODO
 # Write the `wage` calculation to the Streamlit sidebar
 # YOUR CODE HERE
+
+
+st.sidebar.write(wage)
+
 
 ##########################################
 # Step 2 - Part 2:
@@ -280,6 +287,8 @@ if st.sidebar.button("Send Transaction"):
     # Your `account`, the `candidate_address`, and the `wage` as parameters
     # Save the returned transaction hash as a variable named `transaction_hash`
     # YOUR CODE HERE
+    
+    transaction_hash = send_transaction(account, candidate_address, wage)
 
     # Markdown for the transaction hash
     st.sidebar.markdown("#### Validated Transaction Hash")
